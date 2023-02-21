@@ -1,0 +1,1 @@
+sudo ln -s ~/dev/linux/mx3/theme/git/MX3-theme-github/MX3 /usr/share/themes/MX3
