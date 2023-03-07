@@ -1743,11 +1743,10 @@ actionbar > revealer > box > viewswitcher > box > button:not(:first-child) {
 }
 
 headerbar {
-  padding: 0 6px;
+  padding: 0 0px;
   color: #e0e5eb;
-  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.25);
-  background-color: #3884de;
-  min-height: 40px;
+  background-color: #0078D7;
+  min-height: 10px;
 }
 
 headerbar:backdrop {
@@ -4835,15 +4834,12 @@ stackswitcher button.circular {
 
 decoration {
   border-radius: 0;
-  border: 1px solid #3884de;
-  transition: 200ms ease-out;
-  box-shadow: 0 3px 5px 0 rgba(56, 132, 222, 0.3), 0 8px 8px 0 rgba(197, 215, 237, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.25);
-  margin: 6px;
+  border: 2px solid #0078D7;
+  margin: 0px;
 }
 
 decoration:backdrop {
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 3px 5px 0 transparent, 0 8px 8px 0 transparent, 0 3px 3px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration {
