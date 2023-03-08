@@ -181,7 +181,6 @@ textview {
 spinner {
   background: none;
   opacity: 0;
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
 
 spinner:checked {
@@ -1422,11 +1421,9 @@ modelbutton.flat radio:first-child {
 }
 
 modelbutton.flat arrow.left {
-  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 
 modelbutton.flat arrow.right {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 *:link, button:link, button:visited {
@@ -1565,7 +1562,6 @@ combobox button.combo {
 }
 
 combobox arrow {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
   min-width: 16px;
 }
@@ -1787,10 +1783,6 @@ headerbar.selection-mode .selection-menu {
 
 headerbar.selection-mode .selection-menu GtkArrow {
   -GtkArrow-arrow-scaling: 1;
-}
-
-headerbar.selection-mode .selection-menu .arrow {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 .maximized headerbar.selection-mode {
@@ -2556,12 +2548,10 @@ treeview.view:drop(active).before {
 }
 
 treeview.view.expander {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
   color: #878b91;
 }
 
 treeview.view.expander:dir(rtl) {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
 treeview.view.expander:hover {
@@ -2577,7 +2567,6 @@ treeview.view.expander:selected:hover {
 }
 
 treeview.view.expander:checked {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 treeview.view.progressbar, treeview.view.progressbar:focus {
@@ -2779,7 +2768,6 @@ menu menuitem arrow:dir(ltr),
 .menu menuitem arrow:dir(ltr),
 .context-menu menuitem arrow:dir(ltr),
 popover.background.touch-selection menuitem arrow:dir(ltr) {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
   margin-left: 8px;
 }
 
@@ -2787,7 +2775,6 @@ menu menuitem arrow:dir(rtl),
 .menu menuitem arrow:dir(rtl),
 .context-menu menuitem arrow:dir(rtl),
 popover.background.touch-selection menuitem arrow:dir(rtl) {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
   margin-right: 8px;
 }
 
@@ -2830,7 +2817,6 @@ popover.background.touch-selection > arrow.top,
 .csd popover.background.touch-selection > arrow.top {
   margin-top: -4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 menu > arrow.bottom,
@@ -2841,7 +2827,6 @@ popover.background.touch-selection > arrow.bottom,
   margin-top: 8px;
   margin-bottom: -12px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 menu > arrow:hover,
@@ -2917,11 +2902,9 @@ cursor-handle {
 }
 
 cursor-handle.top {
-  -gtk-icon-source: -gtk-icontheme("selection-start-symbolic");
 }
 
 cursor-handle.bottom {
-  -gtk-icon-source: -gtk-icontheme("selection-end-symbolic");
 }
 
 notebook {
@@ -3066,7 +3049,6 @@ notebook > header.left > tabs > tab:checked {
 }
 
 notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > tabs > arrow.up:last-child {
@@ -3074,7 +3056,6 @@ notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > t
 }
 
 notebook > header.top > tabs > arrow.down, notebook > header.bottom > tabs > arrow.down {
-  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 
 notebook > header.top > tabs > arrow.down:first-child, notebook > header.bottom > tabs > arrow.down:first-child {
@@ -3082,7 +3063,6 @@ notebook > header.top > tabs > arrow.down:first-child, notebook > header.bottom 
 }
 
 notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow.up {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 notebook > header.left > tabs > arrow.up:last-child, notebook > header.right > tabs > arrow.up:last-child {
@@ -3090,7 +3070,6 @@ notebook > header.left > tabs > arrow.up:last-child, notebook > header.right > t
 }
 
 notebook > header.left > tabs > arrow.down, notebook > header.right > tabs > arrow.down {
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 notebook > header.left > tabs > arrow.down:first-child, notebook > header.right > tabs > arrow.down:first-child {
@@ -3178,19 +3157,15 @@ scrollbar button {
 }
 
 scrollbar.vertical button.down {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 scrollbar.vertical button.up {
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 scrollbar.horizontal button.down {
-  -gtk-icon-source: -gtk-icontheme("pan-right-symbolic");
 }
 
 scrollbar.horizontal button.up {
-  -gtk-icon-source: -gtk-icontheme("pan-left-symbolic");
 }
 
 scrollbar slider {
@@ -4241,11 +4216,9 @@ window.thunar > grid > paned > .sidebar > treeview.view:disabled image, .budgie-
 expander arrow {
   min-width: 16px;
   min-height: 16px;
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 expander arrow:dir(rtl) {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
 expander arrow:hover {
@@ -4253,7 +4226,6 @@ expander arrow:hover {
 }
 
 expander arrow:checked {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 calendar {
@@ -7320,7 +7292,6 @@ UnityPanelWidget:backdrop,
 }
 
 .lightdm.entry:active {
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
   animation: dashentry_spinner 1s infinite linear;
 }
 
@@ -9919,7 +9890,6 @@ toolbar.bottom-toolbar button, .bottom-toolbar.inline-toolbar button {
 
 .source-list.category-expander {
   color: #e6ebef;
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
   -GtkTreeView-expander-size: 16;
 }
 
@@ -9930,7 +9900,6 @@ toolbar.bottom-toolbar button, .bottom-toolbar.inline-toolbar button {
 }
 
 .source-list.category-expander:checked {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 GraniteWidgetsWelcome {
@@ -11042,7 +11011,6 @@ leaflet.unfolded > separator.sidebar {
 }
 
 .selection-mode hdyleaflet headerbar .selection-menu .arrow, .selection-mode leaflet.unfolded headerbar .selection-menu .arrow {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 .maximized .selection-mode hdyleaflet headerbar, .maximized .selection-mode leaflet.unfolded headerbar {
