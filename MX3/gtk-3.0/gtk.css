@@ -11184,3 +11184,244 @@ window > hdyleaflet > scrolledwindow > viewport.frame > list > row.activatable .
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
+
+
+
+
+/*
+ * to install, copy to ~/.config/gtk-3.0/gtk2xfce4basic.css
+ * and append the line…
+ *
+ *  @import 'gtk2xfce4basic.css';
+ *
+ * to ~/.config/gtk-3.0/gtk.css
+ */
+
+/* somewhat unfuck GTK+3, by mirabilos, Ⓕ CC0 — theme Xfce basic */
+
+/*-
+ * append to ~/.xsessionrc or so, ~/.pam_environment or ~/.profile maybe
+ *
+ * GTK_OVERLAY_SCROLLING=0; export GTK_OVERLAY_SCROLLING
+ *
+ * merge into ~/.config/gtk-3.0/settings.ini
+ *
+ * [Settings]
+ * gtk-xft-rgba=none
+ * gtk-cursor-theme-name=core
+ * gtk-enable-animations=0
+ * gtk-primary-button-warps-slider=false
+ *
+ * Firefox about:config set: pref("widget.non-native-theme.enabled", false);
+ * and consider a userContent.css to disable website-styled scroll“bar”s (see
+ * https://edugit.org/-/snippets/31 for how).
+ *
+ * Try: GTK_DEBUG=interactive gtk3-demo
+ */
+
+/* remove dotted lines from GTK+3 applications */
+.undershoot.top, .undershoot.right, .undershoot.bottom, .undershoot.left {
+    background-image:none;
+}
+undershoot.top, undershoot.right, undershoot.bottom, undershoot.left {
+    background-image:none;
+}
+
+/* force scrollbar arrows */
+.scrollbar, scrollbar {
+    -GtkScrollbar-has-backward-stepper:true !important;
+    -GtkScrollbar-has-forward-stepper:true !important;
+}
+
+/* GTK+2-style scrollbar with Xfce basic theme colours {{{ */
+
+scrollbar.horizontal, scrollbar.horizontal content,
+scrollbar.horizontal button.up, scrollbar.horizontal button.up:disabled,
+scrollbar.horizontal trough, scrollbar.horizontal slider,
+scrollbar.horizontal button.down, scrollbar.horizontal button.down:disabled,
+scrollbar.vertical, scrollbar.vertical content,
+scrollbar.vertical button.up, scrollbar.vertical button.up:disabled,
+scrollbar.vertical trough, scrollbar.vertical slider,
+scrollbar.vertical button.down, scrollbar.vertical button.down:disabled {
+    margin:0px;
+    outline:0px;
+    -gtk-outline-radius:0;
+    border-radius:0px;
+    border:0px;
+    box-shadow:none;
+    padding:0px;
+    background-color:inherit;
+}
+
+scrollbar.horizontal button.up, scrollbar.horizontal button.up:disabled,
+scrollbar.horizontal button.down, scrollbar.horizontal button.down:disabled,
+scrollbar.vertical button.up, scrollbar.vertical button.up:disabled,
+scrollbar.vertical button.down, scrollbar.vertical button.down:disabled {
+    -gtk-icon-source:none;
+}
+
+scrollbar.horizontal {
+    min-height:14px;
+    box-shadow:
+        inset 1px 1px 0 0 #8C8982,
+        inset -1px -1px 0 0 #FBFBFA;
+    padding:1px;
+    background-color:#C4C2BD;
+}
+
+scrollbar.horizontal contents {
+    min-height:14px;
+}
+
+scrollbar.horizontal button.up {
+    min-width:11px;
+    background:
+        linear-gradient(to top right,    transparent 49.5%, #000000 50%) 5px 6px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #000000 50%) 5px 4px / 3px 3px,
+        linear-gradient(to top right,    transparent 49.5%, #434341 50%) 4px 6px / 4px 4px,
+        linear-gradient(to bottom right, transparent 49.5%, #434341 50%) 4px 3px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.horizontal button.up:disabled {
+    min-width:11px;
+    background:
+        linear-gradient(to top right,    transparent 49.5%, #757575 50%) 5px 6px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #757575 50%) 5px 4px / 3px 3px,
+        linear-gradient(to top right,    transparent 49.5%, #9D9D9D 50%) 4px 6px / 4px 4px,
+        linear-gradient(to bottom right, transparent 49.5%, #959493 50%) 4px 3px / 4px 4px,
+        linear-gradient(to top right,    transparent 49.5%, #FFFFFF 50%) 6px 7px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #FFFFFF 50%) 6px 5px / 3px 3px,
+        linear-gradient(to top right,    transparent 49.5%, #F0EFED 50%) 5px 7px / 4px 4px,
+        linear-gradient(to bottom right, transparent 49.5%, #F0EFED 50%) 5px 4px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.horizontal trough {
+    min-height:14px;
+}
+
+scrollbar.horizontal slider {
+    min-width:18px;
+}
+
+scrollbar.horizontal button.down {
+    min-width:11px;
+    background:
+        linear-gradient(to bottom left, transparent 49.5%, #000000 50%) 5px 4px / 3px 3px,
+        linear-gradient(to top left,    transparent 49.5%, #000000 50%) 5px 6px / 3px 3px,
+        linear-gradient(to bottom left, transparent 49.5%, #434341 50%) 5px 3px / 4px 4px,
+        linear-gradient(to top left,    transparent 49.5%, #434341 50%) 5px 6px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.horizontal button.down:disabled {
+    min-width:11px;
+    background:
+        linear-gradient(to bottom left, transparent 49.5%, #757575 50%) 5px 4px / 3px 3px,
+        linear-gradient(to top left,    transparent 49.5%, #757575 50%) 5px 6px / 3px 3px,
+        linear-gradient(to bottom left, transparent 49.5%, #959493 50%) 5px 3px / 4px 4px,
+        linear-gradient(to top left,    transparent 49.5%, #9D9D9D 50%) 5px 6px / 4px 4px,
+        linear-gradient(to bottom left, transparent 49.5%, #FFFFFF 50%) 6px 5px / 3px 3px,
+        linear-gradient(to top left,    transparent 49.5%, #FFFFFF 50%) 6px 7px / 3px 3px,
+        linear-gradient(to bottom left, transparent 49.5%, #F0EFED 50%) 6px 4px / 4px 4px,
+        linear-gradient(to top left,    transparent 49.5%, #F0EFED 50%) 6px 7px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.horizontal button.up, scrollbar.horizontal button.up:disabled,
+scrollbar.horizontal slider,
+scrollbar.horizontal button.down, scrollbar.horizontal button.down:disabled {
+    min-height:11px;
+    box-shadow:
+        inset -2px -2px 0 0 #9E9A91,
+        inset 1px 1px 0 0 #FFFFFF,
+        inset -1px -1px 0 0 #000000;
+    /*      ↑   →   ↓   ←   */
+    padding:1px 2px 2px 1px;
+    background-color:#DCDAD5;
+}
+
+scrollbar.vertical {
+    min-width:14px;
+    box-shadow:
+        inset 1px 1px 0 0 #8C8982,
+        inset -1px -1px 0 0 #FBFBFA;
+    padding:1px;
+    background-color:#C4C2BD;
+}
+
+scrollbar.vertical contents {
+    min-width:14px;
+}
+
+scrollbar.vertical button.up {
+    min-height:11px;
+    background:
+        linear-gradient(to bottom right, transparent 49.5%, #000000 50%) 4px 5px / 3px 3px,
+        linear-gradient(to bottom left,  transparent 49.5%, #000000 50%) 6px 5px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #434341 50%) 3px 4px / 4px 4px,
+        linear-gradient(to bottom left,  transparent 49.5%, #434341 50%) 6px 4px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.vertical button.up:disabled {
+    min-height:11px;
+    background:
+        linear-gradient(to bottom right, transparent 49.5%, #757575 50%) 4px 5px / 3px 3px,
+        linear-gradient(to bottom left,  transparent 49.5%, #757575 50%) 6px 5px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #959493 50%) 3px 4px / 4px 4px,
+        linear-gradient(to bottom left,  transparent 49.5%, #9D9D9D 50%) 6px 4px / 4px 4px,
+        linear-gradient(to bottom right, transparent 49.5%, #FFFFFF 50%) 5px 6px / 3px 3px,
+        linear-gradient(to bottom left,  transparent 49.5%, #FFFFFF 50%) 7px 6px / 3px 3px,
+        linear-gradient(to bottom right, transparent 49.5%, #F0EFED 50%) 4px 5px / 4px 4px,
+        linear-gradient(to bottom left,  transparent 49.5%, #F0EFED 50%) 7px 5px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.vertical trough {
+    min-width:14px;
+}
+
+scrollbar.vertical slider {
+    min-height:18px;
+}
+
+scrollbar.vertical button.down {
+    min-height:11px;
+    background:
+        linear-gradient(to top left,  transparent 49.5%, #000000 50%) 6px 5px / 3px 3px,
+        linear-gradient(to top right, transparent 49.5%, #000000 50%) 4px 5px / 3px 3px,
+        linear-gradient(to top left,  transparent 49.5%, #434341 50%) 6px 5px / 4px 4px,
+        linear-gradient(to top right, transparent 49.5%, #434341 50%) 3px 5px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.vertical button.down:disabled {
+    min-height:11px;
+    background:
+        linear-gradient(to top left,  transparent 49.5%, #757575 50%) 6px 5px / 3px 3px,
+        linear-gradient(to top right, transparent 49.5%, #757575 50%) 4px 5px / 3px 3px,
+        linear-gradient(to top left,  transparent 49.5%, #9D9D9D 50%) 6px 5px / 4px 4px,
+        linear-gradient(to top right, transparent 49.5%, #959493 50%) 3px 5px / 4px 4px,
+        linear-gradient(to top left,  transparent 49.5%, #FFFFFF 50%) 7px 6px / 3px 3px,
+        linear-gradient(to top right, transparent 49.5%, #FFFFFF 50%) 5px 6px / 3px 3px,
+        linear-gradient(to top left,  transparent 49.5%, #F0EFED 50%) 7px 6px / 4px 4px,
+        linear-gradient(to top right, transparent 49.5%, #F0EFED 50%) 4px 6px / 4px 4px;
+    background-repeat:no-repeat;
+}
+
+scrollbar.vertical button.up, scrollbar.vertical button.up:disabled,
+scrollbar.vertical slider,
+scrollbar.vertical button.down, scrollbar.vertical button.down:disabled {
+    min-width:11px;
+    box-shadow:
+        inset -2px -2px 0 0 #9E9A91,
+        inset 1px 1px 0 0 #FFFFFF,
+        inset -1px -1px 0 0 #000000;
+    /*      ↑   →   ↓   ←   */
+    padding:1px 2px 2px 1px;
+    background-color:#DCDAD5;
+}
+
+/* }}} end of GTK+2-style scrollbar */
