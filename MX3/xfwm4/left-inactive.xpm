@@ -1,7 +1,7 @@
 /* XPM */
 static char * left_inactive_xpm[] = {
-"5 1 3 1",
+"2 1 3 1",
 " 	c None",
 ".	c #555555",
 "+	c #232A2D",
-"..+++"};
+".."};
